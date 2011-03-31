@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+}
+
+#bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+#content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+#title-box {
+    text-align: right;
+    padding-top: 5px;
+    padding-left: 15px;
+    width: 610px;
+}
+
+#title {
+    display: none;
+    height: 65px;
+    font-size: 50px;
+}
+
+#date {
+    display: none;
+    color: #ffa500;
+    font-size: 40px;
+    width: 100%;
+}
