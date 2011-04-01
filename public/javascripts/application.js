@@ -1,6 +1,10 @@
 $(document).ready(function() {
-    $('#title').fadeIn(3000, function() {
-        $('#date').fadeIn(1000);
+    $('#bg').load(function() {
+        $(this).show();
+        $('#content').show();
+        $('#title').fadeIn(3000, function() {
+            $('#date').fadeIn(1000);
+        });
     });
 });
 
