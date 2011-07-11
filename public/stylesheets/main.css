@@ -5,14 +5,17 @@ body {
 }
 
 #bg {
-    display: none;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
 }
 
-#content {
+.section {
+    display: none;
+}
+
+#footer {
     display: none;
     position: absolute;
     left: 0;
@@ -24,7 +27,27 @@ body {
     color: #ffffff;
 }
 
+#party .section-image {
+    float: left;
+    left: 0;
+}
+
+#party .details {
+    position: absolute;
+    left: 650px;
+    color: #ffa500;
+    font-family: eigerdals-1;
+}
+
+#travel .section-image {
+    position: absolute;
+    width: 100%;
+    bottom: 120px;
+    left: 0;
+}
+
 #title-box {
+    float: left;
     text-align: right;
     padding-top: 5px;
     padding-left: 15px;
@@ -35,6 +58,7 @@ body {
     display: none;
     height: 65px;
     font-size: 50px;
+    font-family: peacock-deep-1;
 }
 
 #date {
@@ -42,4 +66,22 @@ body {
     color: #ffa500;
     font-size: 40px;
     width: 100%;
+    font-family: eigerdals-1;
+}
+
+#links {
+    float: left;
+    padding-top: 15px;
+    padding-left: 45px;
+}
+
+a, a:visited, a:hover {
+     color: white;
+     font-family: eigerdals-1;
+     font-size: 20px;
+     text-decoration: none;    
+}
+
+a.section-link.active {
+    color: #ffa500;
 }
