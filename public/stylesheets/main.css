@@ -2,6 +2,8 @@ body {
     margin: 0px;
     background: #000000;
     overflow: hidden;
+    font-family: eigerdals-1;
+    color: #ffffff;
 }
 
 #bg {
@@ -24,27 +26,35 @@ body {
     width: 100%;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
 }
 
-#party .section-image {
+#amp {
+    float: right;
+    font-size: 45px;
+}
+
+#names {
+    float: right;
+    font-size: 40px;
+    text-align: right;
+}
+
+/*#details */.section-image {
     float: left;
     left: 0;
 }
 
-#party .details {
+.section-content {
     position: absolute;
     left: 650px;
-    color: #ffa500;
-    font-family: eigerdals-1;
 }
 
-#travel .section-image {
+/*#travel .section-image {
     position: absolute;
     width: 100%;
     bottom: 120px;
     left: 0;
-}
+}*/
 
 #title-box {
     float: left;
@@ -66,20 +76,32 @@ body {
     color: #ffa500;
     font-size: 40px;
     width: 100%;
-    font-family: eigerdals-1;
 }
 
 #links {
     float: left;
-    padding-top: 15px;
+    padding-top: 0px;
     padding-left: 45px;
 }
 
+.section-link {
+    vertical-align: middle;
+    line-height: 40px;
+    color: white;
+    font-size: 30px;
+}
+
+.title {
+    font-family: peacock-deep-1;
+    font-size: 30px;
+}
+
+.text {
+}
+
 a, a:visited, a:hover {
-     color: white;
-     font-family: eigerdals-1;
-     font-size: 20px;
-     text-decoration: none;    
+    text-decoration: none;    
+    color: #ffa500;
 }
 
 a.section-link.active {
