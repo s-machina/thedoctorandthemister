@@ -6,13 +6,26 @@ $.fn.activate = function(callback) {
     $(this).fadeIn(2000, callback);
 }
 
+function clearActiveSectionLink() {
+    $('a.section-link.active').removeClass('active');
+}
+
+function clearActiveSubSectionLink() {
+    $('a.subsection-link.active').removeClass('active');
+}
+
 $(document).ready(function() {
     $('#bg').load(function() {
         $(this).activate(function() {
             $('#footer, #title').fadeIn(2000, function() {
-                $('#date').fadeIn(1000);
+                $('#date, #links').fadeIn(1000);
             });
         });
+    });
+
+    $('#title a').click(function(e) {
+        e.preventDefault();
+        $('#bg').activate(clearActiveSectionLink);
     });
 
     $('a.section-link').click(function(e) {
@@ -21,7 +34,7 @@ $(document).ready(function() {
             return;
         }
         var section = $(this).attr('href');
-        $('a.section-link.active').removeClass('active');
+        clearActiveSectionLink();
         $(this).addClass('active');
         $('#' + section).activate();
     });

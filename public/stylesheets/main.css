@@ -2,7 +2,7 @@ body {
     margin: 0px;
     background: #000000;
     overflow: hidden;
-    font-family: eigerdals-1;
+    font-family: fenwick-1;
     color: #ffffff;
 }
 
@@ -17,6 +17,11 @@ body {
     display: none;
 }
 
+#footer, .section-text {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+}
+
 #footer {
     display: none;
     position: absolute;
@@ -24,29 +29,46 @@ body {
     bottom: 0;
     height: 120px;
     width: 100%;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.7);
 }
 
-#amp {
-    float: right;
-    font-size: 45px;
+#footer a, a:visited, a:hover {
+    text-decoration: none;    
+    color: white;
 }
 
 #names {
-    float: right;
+    float: left;
     font-size: 40px;
+    line-height: 0.9;
     text-align: right;
+    font-family: peacock-deep-1;
+    margin-right: 3px;
 }
 
-/*#details */.section-image {
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.p {
+    float: left;
+}
+
+div.section {
+    width: 400px;
+}
+
+.section-image {
     float: left;
     left: 0;
 }
 
-.section-content {
+.section-text {
     position: absolute;
+    font-size: 14px;
+    padding: 15px;
     left: 650px;
+    width: 400px;
 }
 
 /*#travel .section-image {
@@ -76,19 +98,36 @@ body {
     color: #ffa500;
     font-size: 40px;
     width: 100%;
+    font-family: eigerdals-1;
 }
 
 #links {
     float: left;
     padding-top: 0px;
     padding-left: 45px;
+    display:none;
 }
 
-.section-link {
+#links .section-link {
     vertical-align: middle;
-    line-height: 40px;
-    color: white;
+    line-height: 60px;
     font-size: 30px;
+    font-family: fenwick-1;
+}
+
+#subsection-links {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#subsection-links div {
+    text-align: center;
+    width: 123px;
+    float: left;
+}
+
+.subsection {
+    margin-top: 15px;
 }
 
 .title {
@@ -96,14 +135,38 @@ body {
     font-size: 30px;
 }
 
-.text {
+.qa {
+    float: left;
+    padding-top: 15px;
 }
 
-a, a:visited, a:hover {
+.question {
+    float: left;
+    font-weight: bold;
+    font-variant: small-caps;
+    width: 60px;
+}
+
+.answer {
+    float: left;
+    width: 340px;
+}
+
+a, a:visited {
     text-decoration: none;    
     color: #ffa500;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 a.section-link.active {
     color: #ffa500;
+}
+
+#travel .section-image {
+    position: absolute;
+    left: 0;
+    bottom: 120;
 }
