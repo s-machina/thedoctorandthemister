@@ -14,14 +14,22 @@ function clearActiveSubSectionLink() {
     $('a.subsection-link.active').removeClass('active');
 }
 
+function activateFooter() {
+  $('#footer, #title').fadeIn(2000, function() {
+      $('#date, #links').fadeIn(1000);
+  });
+}
+
 $(document).ready(function() {
-    $('#bg').load(function() {
-        $(this).activate(function() {
-            $('#footer, #title').fadeIn(2000, function() {
-                $('#date, #links').fadeIn(1000);
-            });
-        });
-    });
+    var hash = document.location.hash;
+    if (hash && hash.length > 0 && $(hash + '.section')) {
+      $(hash).activate(activateFooter);
+    }
+    else {
+      $('#bg').load(function() {
+          $(this).activate(activateFooter);
+      });
+    }
 
     $('#title a').click(function(e) {
         e.preventDefault();
@@ -36,6 +44,8 @@ $(document).ready(function() {
         var section = $(this).attr('href');
         clearActiveSectionLink();
         $(this).addClass('active');
-        $('#' + section).activate();
+        var sectionId = '#' + section;
+        $(sectionId).activate();
+        document.location.hash = sectionId;
     });
 });

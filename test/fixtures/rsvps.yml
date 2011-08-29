@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  guest_name: MyString
+  companion_name: MyString
+  is_joining: false
+
+two:
+  guest_name: MyString
+  companion_name: MyString
+  is_joining: false
