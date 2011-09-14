@@ -1,0 +1,6 @@
+<% message = if @rsvp.is_joining 
+    "Yay! We look forward to seeing you!" 
+    else
+    "Oh no! We're sorry you can't make it and hope to see you soon!" 
+    end%>
+$('#rsvp .content').html('<div class="response"><%= escape_javascript(message) %></div>');
