@@ -1,3 +1,7 @@
+$.ajaxSetup({ 
+  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+})
+
 $.fn.activate = function(callback) {
     if ($(this).is(':visible')) {
       return;
@@ -5,6 +9,11 @@ $.fn.activate = function(callback) {
     $(".section:visible").fadeOut(1000);
     $(this).fadeIn(2000, callback);
 }
+
+$.fn.apply = function() {
+  return this;
+};
+
 
 function clearActiveSectionLink() {
     $('a.section-link.active').removeClass('active');
@@ -34,6 +43,7 @@ $(document).ready(function() {
     $('#title a').click(function(e) {
         e.preventDefault();
         $('#bg').activate(clearActiveSectionLink);
+        document.location.hash = '';
     });
 
     $('a.section-link').click(function(e) {
@@ -47,5 +57,14 @@ $(document).ready(function() {
         var sectionId = '#' + section;
         $(sectionId).activate();
         document.location.hash = sectionId;
+    });
+    $('#rsvp form').submit(function(e) {
+        e.preventDefault();
+        if ($('#guest_name input').val() == '') {
+          $('#guest_name .form-error').fadeIn();
+          return false;
+        }
+        $.post(this.action, $(this).serialize(), null, "script");
+        return false;
     });
 });

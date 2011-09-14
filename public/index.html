@@ -37,6 +37,7 @@ Cocktails, dinner, and dancing, with a little ceremonial interlude thrown in.
 <p>
 Please <a class="section-link" href="rsvp">RSVP</a> on our site to let us know that you'll join us.
 </p>
+<p>Several people have asked about our registry. The only gift we'd like is that of your presence. Seriously, we don't need anything. But for those who insist, we've registerd for some local ceramics <a href="http://www.heathceramics.com/heath/store/index.cfm?fuseaction=shopping.giftregistry&do=display&giftregistry_ID=5549" target="other">here</a>. We also like Champagne.
 </div>
             </div>
         </div>
@@ -44,40 +45,56 @@ Please <a class="section-link" href="rsvp">RSVP</a> on our site to let us know t
     <div id="travel" class="section">
         <div class="section-image">
             <img src="http://farm3.static.flickr.com/2550/4102301752_ef82042082_o.jpg"/>
-            <!--<img src="/images/travel.jpg"/>-->
         </div>
         <div class="section-text"><p>We love San Francisco, which is why we've decided to celebrate here in our adopted home.</p>
 
 <div id="sf" class="subsection active">
 <p>The San Francisco International Airport (SFO), has many many flights in and out of town. <a href="http://www.bart.gov" target="other">BART</a> trains leave from SFO and will take you to San Francisco. Flights into Oakland (OAK) may be a little cheaper, but you will still need to take a shuttle from the airport to BART to get into the city.</p>
 
-We have reserved a block of rooms at the <a href="http://metrohotelsf.com" target="other">Metro Hotel</a>, 
-which is about six blocks from the venue.  Additionally, we recommend looking into either 
+<p>We have reserved a block of rooms at the <a href="http://metrohotelsf.com" target="other">Metro Hotel</a>, 
+which is about six blocks from the venue. Be sure to mention our name when reserving.<p>Additionally, we recommend looking into either 
 <a href="http://www.vrbo.com" target="other">VRBO</a> or 
 <a href="http://www.airbnb.com" target="other">Airbnb</a> to find more homey accommodations. 
 Neighborhoods near our event include: NoPa (or north of the panhandle), Lower Haight, Upper Haight, Fillmore, 
 Castro, or Duboce Triangle.</p>
 <p>Hotels are plentiful in the Union Square neighborhood downtown. They are a little further away from the venue however.</p>
-<p>For our out-of-town guests, we will be hosting something on Friday night so as to spend a
-a little more time with those who travelled from far away. More details will
+<p>For our out-of-town guests, we will be hosting something on Friday night so as to spend
+a little more time with those who travelled from far away. More details on the location and time will 
 be posted here as we get closer to the event.</p>
 </div>
-
-<!--<div id="venue" class="subsection">
-<p>We recommend <em>against</em> bringing a car, since we'd 
-like you to raise a glass or two with us, and parking can be very difficult in the residential neighborhood 
-of the venue. If you are not staying within walking distance, we suggest taking a cab.</p>
-
-<p>You can walking or cabbing to the party, bike, bus, or cab to the party.
-Taxi cabs include: Green Cab 415-626-GREEN; Luxor Cabs 415-282-4141; DeSoto Cab 415-970-1300; or Yellow Cab 415-333-3333.</p>-->
-</div>
-<div class="subsection">
 </div>
         </div>
     </div>
     <div id="rsvp" class="section">
+        <div class="section-image">
+            <img src="http://farm7.static.flickr.com/6077/6145952233_347e82e3dd_b.jpg"/>
+        </div>
         <div class="content">
-            RSVP
+            <div class="form-row">Special thanks to Rachel Sitkin Marks for designing our paper invites. See more of her work <a href="http://rachelsitkin.com" target="other">here</a>.</div>
+            <form method="POST" action="/rsvps">
+            <div id="is_joining" class="form-row">
+                <div class="question">So... are you coming?</div>
+                <div class="answer">
+                    <select name="rsvp[is_joining]">
+                      <option value="true">Yes!!!</option>
+                      <option value="false">No...</option>
+                    </select>
+                </div>
+            </div>
+            <div id="guest_name" class="form-row">
+                <div class="question">And your name is?</div>
+                <div class="answer"><input type="text" name="rsvp[guest_name]"/></div>
+                <div class="form-error">&larr; Ahem...</div>
+            </div>
+            <div id="companion_name" class="form-row">
+                <div class="question">And your companion?<span class="disclaimer">*</span></div>
+                <div class="answer"><input type="text" name="rsvp[companion_name]"/></div>
+            </div>
+            <div class="form-row">
+                <div class="answer"><input type="submit"/></div>
+            </div>
+            <div class="form-row"><span class="disclaimer">* If you have a second name on your invite, that's your companion. If you don't and having a guest would really make your evening, by all means bring one.</span></div>
+            </form>
         </div>
     </div>
     <div id="footer">

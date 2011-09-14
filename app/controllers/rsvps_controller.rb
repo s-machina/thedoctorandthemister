@@ -1,17 +1,20 @@
 class RsvpsController < ApplicationController
+  
+  def protect_against_forgery?
+    false
+  end
+
+  def new
+  end
+
   # POST /rsvps
   # POST /rsvps.xml
   def create
     @rsvp = Rsvp.new(params[:rsvp])
-
+    puts @rsvp.to_json
     respond_to do |format|
-      if @rsvp.save
-        format.html { redirect_to(@rsvp, :notice => 'Rsvp was successfully created.') }
-        format.xml  { render :xml => @rsvp, :status => :created, :location => @rsvp }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @rsvp.errors, :status => :unprocessable_entity }
-      end
+        @rsvp.save
+        format.js
     end
   end
 end
