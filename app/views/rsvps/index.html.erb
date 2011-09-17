@@ -1,0 +1,17 @@
+<html>
+<body>
+<% count = 0
+   @rsvps.each do |r| 
+     if r.is_joining
+       count = count + 1
+     end
+     if r.companion_name and r.companion_name != '' and r.companion_name != 'n/a'
+       count = count + 1
+     end
+%>
+<%= r.guest_name %> | <%= r.companion_name %> | <%= r.is_joining %> <br/>
+<% end %>
+    <br/>
+    Total guests: <%= count %>
+</body>
+</html>

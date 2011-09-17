@@ -4,7 +4,8 @@ class RsvpsController < ApplicationController
     false
   end
 
-  def new
+  def index
+    @rsvps = Rsvp.find :all
   end
 
   # POST /rsvps
