@@ -1,4 +1,5 @@
 class RsvpsController < ApplicationController
+  layout nil
   
   def protect_against_forgery?
     false
